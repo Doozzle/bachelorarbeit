@@ -27,7 +27,10 @@ def on_message(ws, message):
 
     #Create Connection to the database
     
-    connection = pyodbc.connect('Driver={ODBC Driver 18 for SQL Server};Server=tcp:network-watching.database.windows.net,1433;Database=network-watching;Uid=Adminuser;Pwd=!Trompete31012002!4;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;')
+    ##################################
+    #CONNECTION WON'T WORK AS THE NEEDED CREDENTIALS ARE NOT PROVIDED IN THIS GITHUB REPOSITORY!
+    ##################################
+    connection = pyodbc.connect('Driver={ODBC Driver 18 for SQL Server};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;')
     cursor = connection.cursor()
     
     #Check whether the mandatory field "client firewall session" even exists in the message
@@ -92,7 +95,11 @@ if __name__ == "__main__":
     # Construct Header for WebSocket Connection
     header = {}
     # WebSocket Key from Streaming API Page
-    header["Authorization"] = "eyJhbGciOiJIUzI1NiIsInR5cGUiOiJqd3QifQ.eyJjdXN0b21lcl9pZCI6IjUwMDE1MjgiLCJjcmVhdGlvbl9kYXRlIjoxNjkwMTg1ODA1fQ.wqtHNwZ9cj5gPXo-3-5a2Iv2slbtKAPu97_xAMa86Jg"
+
+    ############################################
+    #CONNECTION WON'T WORK AS THE NEEDED CREDENTIALS ARE NOT PROVIDED IN THIS GITHUB REPOSITORY!
+    ############################################
+    header["Authorization"] = ""
     # Subscription TOPIC for Streaming API
     # (audit|apprf|location|monitoring|presence|security)
     header["Topic"] = "apprf"

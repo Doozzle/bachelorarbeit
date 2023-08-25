@@ -7,7 +7,10 @@ riskfull_addresses = []
 mac_addresses = []
 
 #Establish Connection to the Database
-connection = pyodbc.connect('Driver={ODBC Driver 18 for SQL Server};Server=tcp:network-watching.database.windows.net,1433;Database=network-watching;Uid=Adminuser;Pwd=!Trompete31012002!4;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;')
+##################################
+#CONNECTION WON'T WORK AS THE NEEDED CREDENTIALS ARE NOT PROVIDED IN THIS GITHUB REPOSITORY!
+##################################
+connection = pyodbc.connect('Driver={ODBC Driver 18 for SQL Server};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;')
 cursor = connection.cursor()
 
 #Get all MAC-addresses from the Database
